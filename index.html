@@ -74,7 +74,7 @@
             background-size: 16px 16px; 
             width: 100vw;
             height: 100vh;
-            background-image: url("resource/bg_main.png");
+            background-image: url("../resource/bg_main.png");
             background-size: cover;
             background-attachment: fixed;
             overflow: hidden;
@@ -89,15 +89,17 @@
         
         .zone{position: fixed; width: calc(100vw - 400px); left: 200px; height: calc(100vh - 100px - 3em);}
         .prompt{height: calc(1vw + 1rem);}
-        .logo_white{
-            height: 74vh; 
-            width: 70vh;
-            left: calc(50vw - 35vh);
-            top: 3vh; 
-            align-content: center;
-            position: absolute;
-            user-select: none;
-        }
+        .logo_white {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; /* 너비 비율 */
+    max-width: 600px; /* 최대 너비 */
+    height: auto;
+    max-height: 80vh; /* 최대 높이 */
+    user-select: none;
+}
         .logo{
             height: 74vh; 
             width: 70vh;
@@ -106,17 +108,19 @@
             background-size: cover;
         }
         
-        .people{position: relative;
-            height: 50vh;
-            overflow: hidden;
-            left: 9vh; 
-            top:7.5vh; 
-        user-select: none;
-        display: flex;
-        align-items: center;
-        justify-items: center;
-        transform: translateY(40px);
-        }
+        .people {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* 전체 화면 너비 */
+    max-width: 90vw; /* 최대 너비 제한 */
+    height: auto;
+    max-height: 70vh; /* 최대 높이 제한 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
         
         #main_p1{height: -webkit-fill-available;}
         .arrow{ position:absolute; width: 130px; height: 100px; top: calc(50vh - 50px);}
@@ -143,9 +147,8 @@
         
         
         
-       
         
-         
+      
         
         
         /*----------모바일----------*/ 
@@ -189,15 +192,17 @@
     box-sizing: border-box;
 }
               .prompt{height: calc(1.5vw + 1.2rem);}
-              .logo_white{
-                  height: 74vh; 
-                  width: 70vh;
-                  left: 50vw;
-                  top: 2vh; 
-                  align-content: center;
-                  position: absolute;
-                  user-select: none;
-              }
+              .people {
+        width: 90vw;
+        max-width: 100%; /* 작은 화면에서도 꽉 채움 */
+        max-height: 60vh; /* 세로 길이 제한 */
+    }
+    .logo_white {
+        width: 80%;
+        max-width: 300px;
+        max-height: 50vh; /* 로고 세로 제한 */
+    }
+
               .logo{
                   width: 30vh;
                   align-content: center;
@@ -205,16 +210,11 @@
               }
               
               .people {
-    position: fixed; /* 부모 요소 기준으로 정렬 */
-   top: 0vh;
-   left:-5vw;
-    width: 100vw; /* 비율 유지 */
-    height: auto; /* 자동 크모 요소에 맞게 이미지 최대 너비 */
-    max-height: 100%; /* 부모기 */
-    display: flex; /* 정렬 */
-    justify-content: center; /* 자식 요소 가로 정렬 */
-    align-items: center; /* 자식 요소 세로 정렬 */
-}
+        width: 90vw;
+        max-width: 100%; /* 작은 화면에서도 꽉 채움 */
+        max-height: 60vh; /* 세로 길이 제한 */
+    }
+   
 
 #main_p1 {
     max-width: 100%; /* 부 요소에 맞게 이미지 최대 높이 */
@@ -253,6 +253,21 @@
         
          
           }
+
+
+/* 아이패드 가로형 */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    .people {
+        width: 80%;
+        max-width: 80vw; /* 화면 비율에 맞게 크기 조정 */
+        max-height: 70vh;
+    }
+    .logo_white {
+        width: 60%;
+        max-width: 500px;
+        max-height: 75vh;
+    }
+}
           </style>
 </head>
 <body>
