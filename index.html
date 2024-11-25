@@ -221,7 +221,15 @@
     object-fit: contain; /* 이미지 비율 유지하면서 부모에 맞춤 */
 }
 
-              .arrow{ position:absolute; width:22vw; height: 50px; top: calc(50vh - 50px);}
+              .arrow {
+    position: absolute;
+    width: 19vw; /* 너비를 뷰포트 기준으로 설정 */
+    height: auto; /* 자동 높이로 설정 */
+    max-width: 100px; /* 최대 너비 제한 */
+    max-height: 50px; /* 최대 높이 제한 */
+    top: calc(50vh - 50px); 
+    object-fit: contain; /* 이미지 비율 유지 */
+}     
               .right{ right: 16px; display: flex; align-items: center; justify-content: end;}
               .left{ left: 16px;display: flex; align-items: center; justify-content: left;}
               
