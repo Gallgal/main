@@ -145,30 +145,7 @@
         
        
         
-        /* 모바일 세로형 */
-@media (max-width: 768px) and (orientation: portrait) {
-    
-}
-
-/* 아이패드 가로형 */
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
-    .people {
-        top: 40vh;
-        left: 40vw;
-         /* 아이패드에서는 적절한 크기로 조정 */
-    }
-    .logo_white{
-                  height: 60vh; 
-                  width: auto;
-                  left: calc(50vw - 14vh);
-                  top: 0; 
-                  align-content: center;
-                  position: absolute;
-                  user-select: none;
-              }
-}
-        
-        
+         
         
         
         /*----------모바일----------*/ 
@@ -215,8 +192,8 @@
               .logo_white{
                   height: 74vh; 
                   width: 70vh;
-                  left: calc(50vw - 14vh);
-                  top: -30vh; 
+                  left: 50vw;
+                  top: 2vh; 
                   align-content: center;
                   position: absolute;
                   user-select: none;
@@ -229,7 +206,7 @@
               
               .people {
     position: fixed; /* 부모 요소 기준으로 정렬 */
-   top: 20vh;
+   top: 0vh;
    left:-5vw;
     width: 100vw; /* 비율 유지 */
     height: auto; /* 자동 크모 요소에 맞게 이미지 최대 너비 */
