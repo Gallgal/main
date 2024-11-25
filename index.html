@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" href="../resource/favi.png" type="image/png">
-
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name="color-scheme" content="light only"/>
 	<meta name="supported-color-schemes" content="light"/>
     <title>find Me!</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <style>
-         body{font-size: calc(0.5vw + 0.5rem);
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>/*서체 별 유니코드 지정하기*/
+        /*영어, 숫자, 특수문자는 헵타*/
+        @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@400;500;600&display=swap');
+        
+        @font-face {
+          font-family: "Pretendard Variable";
+          src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.woff2') format('woff2-variations');
+          font-weight: 100 900;
+          font-style: normal;
+        }
+        
+        
+        
+        body{font-size: calc(0.5vw + 0.5rem);
             line-height: 150%;
             font-family: 'Hepta Slab', 'Pretendard Variable';
         word-break: keep-all;
@@ -63,7 +74,7 @@
             background-size: 16px 16px; 
             width: 100vw;
             height: 100vh;
-            background-image: url("../resource/bg_main.png");
+            background-image: url("resource/bg_main.png");
             background-size: cover;
             background-attachment: fixed;
             overflow: hidden;
@@ -229,51 +240,40 @@
     left: 50%; /* 가로 중앙 */
     transform: translate(-50%, -50%); /* 중앙 정렬 */
 }
-
-.zone {
-    width: 80%; /* 너비 조정 */
-    height: auto; /* 필요에 따라 조정 */
-}
-
-
-
-   
-         
-          }
-    </style>
+          </style>
 </head>
 <body>
     <nav> 
-        <a id="about" href="../about/about.html">About, </a>
-        <a id="project" href="../project/project.html">Project, </a>
-        <a id="designer" href="../designer/designer.html">Designer, </a>
-        <a id="archive" href="../archive/archive.html">Archive. </a>
+        <a id="about" href="about/about.html">About, </a>
+        <a id="project" href="project/project.html">Project, </a>
+        <a id="designer" href="designer/designer.html">Designer, </a>
+        <a id="archive" href="archive/archive.html">Archive. </a>
     </nav>
 
 
     <section class="background" id="ex1">
         <div class="backyard">
-            <!-- <video loop muted autoplay playsinline style="width: 100%;" src="../resource/cxbg.webm" id="main_b1"> </video> -->
-            <img style="width: 100%;" src="../resource/bg_ux.gif" id="main_b1">
+            <!-- <video loop muted autoplay playsinline style="width: 100%;" src="resource/cxbg.webm" id="main_b1"> </video> -->
+            <img style="width: 100%;" src="resource/bg_ux.gif" id="main_b1">
         </div>
         
         <div class="logo_white">
             <!-- <div class="mask"></div>     -->
-            <img class="logo" id="ex1-layer" src="../resource/logo_white.svg">
+            <img class="logo" id="ex1-layer" src="resource/logo_white.svg">
             <div class="people">
-                <img src="../resource/pp_ux.gif" id="main_p1">
+                <img src="resource/pp_ux.gif" id="main_p1">
             </div>
         </div>
         <div class="zone"></div>
-        <div class="arrow left" id="arrow_left" onclick="left()"><img src="../resource/arrow_left.svg"></div>
-        <div class="arrow right" id="arrow_right" onclick="right()"><img src="../resource/arrow_right.svg"></div>
+        <div class="arrow left" id="arrow_left" onclick="left()"><img src="resource/arrow_left.svg"></div>
+        <div class="arrow right" id="arrow_right" onclick="right()"><img src="resource/arrow_right.svg"></div>
     </section>
     <footer class="footerback">
-        <span>SEOULTECH VISUAL COMMUNICATION DESIGN 42ST GRADUATION EXHIBITION WEBSTIE ‘FIND ME!’
+        <span id="footer2">SEOULTECH VISUAL COMMUNICATION DESIGN 42ST GRADUATION EXHIBITION WEBSTIE ‘FIND ME!’
             <br>2024ⓒSeoul National University of Science and Technology. All Rights Reserved.</span>
         <div class="logo_footer">
-            <img style="margin-right: 16px;" src="../resource/logo_tech.svg">
-            <img style="height: 60px;" src="../resource/logo_footer.svg">
+            <img style="margin-right: 8px;" src="resource/logo_tech.svg">
+            <img style="height: 60px;" src="resource/logo_footer.svg">
         </div>
     </footer>
     <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="logo-svg">
@@ -283,8 +283,10 @@
             </clipPath>
         </defs>
         </svg> -->
-    <script>
-        let constrain = 50;
+    <script src='main.js' type="text/javascript">
+
+        // 배경 이미지 슬적슬적
+let constrain = 50;
 let mouseOverContainer = document.getElementById("ex1");
 let ex1Layer = document.getElementById("ex1-layer");
 
@@ -345,9 +347,9 @@ archive.addEventListener('mouseleave', () => {
 
 //------------------------화살표 누르면 사람과 배경이 바뀌게------------------//
 let main_pp = document.getElementById("main_p1");
-let track_pp = ["../resource/pp_ux.gif", "../resource/pp_cx.gif", "../resource/pp_ed.gif", "../resource/pp_il.gif", "../resource/pp_id.gif", "../resource/pp_vd.gif"];
+let track_pp = ["resource/pp_ux.gif", "resource/pp_cx.gif", "resource/pp_ed.gif", "resource/pp_il.gif", "resource/pp_id.gif", "resource/pp_vd.gif"];
 let main_bg = document.getElementById("main_b1");
-let track_bg = ["../resource/bg_ux.gif", "../resource/bg_cx.gif", "../resource/bg_ed.gif", "../resource/bg_il.gif", "../resource/bg_id.gif", "../resource/bg_vd.gif"];
+let track_bg = ["resource/bg_ux.gif", "resource/bg_cx.gif", "resource/bg_ed.gif", "resource/bg_il.gif", "resource/bg_id.gif", "resource/bg_vd.gif"];
 
 let i = 0;
 let currentPage = 'UX';  // 기본 페이지를 UX로 설정
@@ -408,7 +410,7 @@ function getPromptPath(page) {
 
     let selectedFiles = promptFiles[page] || []; // Get the prompts for the specified page
     return selectedFiles.map(file => ({
-        path: `../resource/prompt/${page}/${file}.svg`,
+        path: `resource/prompt/${page}/${file}.svg`,
         file: file
     }));
 }
@@ -514,4 +516,3 @@ function updateTextForMobile() {
 </body>
 
 </html>
-
