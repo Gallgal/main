@@ -150,10 +150,7 @@
         
         
         
-        /*----------모바일----------*/ 
-        
-        
-        @media (max-width: 768px) and (orientation: portrait) {
+       @media (max-width: 1024px) and (orientation: portrait) {
             nav{position: fixed; 
                 text-align: right;
                 right: 0; top: 0;
@@ -182,7 +179,7 @@
               #main_b1{ position: relative; top: 20vh;}
               
               
-.zone {
+              .zone {
     position: absolute;
     width: 80%;
     height: 55%;
@@ -190,12 +187,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-}              .prompt{height: calc(1.5vw + 1.2rem);}
+}
+              .prompt{height: calc(1.5vw + 1.2rem);}
               .logo_white{
-                  height: 74vh; 
-                  width: 70vh;
+                  width: 50vw;
                   left: calc(50vw - 14vh);
-                  top: 3vh; 
+                  top: 30%; 
                   align-content: center;
                   position: absolute;
                   user-select: none;
@@ -208,11 +205,10 @@
                   display: none;
               }
               
-               
               .people {
     position: absolute; /* 부모 요소를 기준으로 위치 설정 */
     top: 50%; /* 세로 중앙 */
-    transform: translate(-40%, -30%); /* 중앙으로 정확히 정렬 */
+    transform: translate(-60%, -50%); /* 중앙으로 정확히 정렬 */
     width: auto; /* 너비 비율 유지 */
     height: 50vh; /* 부모 높이에 상대적으로 설정 */
     overflow: hidden; /* 넘치는 부분 숨김 */
@@ -222,22 +218,20 @@
     justify-content: center; /* 자식 요소 수평 정렬 */
     align-items: center; /* 자식 요소 수직 정렬 */
 }
+
 #main_p1 {
     max-width: 100%; /* 이미지의 최대 너비를 부모 요소에 맞춤 */
     max-height: 100%; /* 이미지의 최대 높이를 부모 요소에 맞춤 */
     object-fit: contain; /* 이미지 비율 유지하면서 부모에 맞춤 */
 }
-
-              .arrow {
+.arrow {
     position: absolute;
     width: 19vw; /* 너비를 뷰포트 기준으로 설정 */
     height: auto; /* 자동 높이로 설정 */
-    max-width: 100px; /* 최대 너비 제한 */
     max-height: 50px; /* 최대 높이 제한 */
     top: calc(50vh - 50px); 
     object-fit: contain; /* 이미지 비율 유지 */
-}     
-              .right{ right: 16px; display: flex; align-items: center; justify-content: end;}
+}              .right{ right: 16px; display: flex; align-items: center; justify-content: end;}
               .left{ left: 16px;display: flex; align-items: center; justify-content: left;}
               
              
@@ -263,7 +257,6 @@
         
          
           }
-
 
           </style>
 </head>
