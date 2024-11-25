@@ -143,25 +143,25 @@
         
         
         
-       /* 모바일 세로형 */
+       
+        
+        /* 모바일 세로형 */
 @media (max-width: 768px) and (orientation: portrait) {
-    .people {
-        max-height: 60vh; /* 모바일에서는 이미지 크기를 조정 */
-    }
+    
 }
 
 /* 아이패드 가로형 */
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
     .people {
-        transform: translate(-34%, 10%); /* 가로, 세로 모두 정확히 중앙에 배치 */
-
-        max-height: 70vh; /* 아이패드에서는 적절한 크기로 조정 */
+        top: 40vh;
+        left: 40vw;
+         /* 아이패드에서는 적절한 크기로 조정 */
     }
     .logo_white{
                   height: 60vh; 
                   width: auto;
                   left: calc(50vw - 14vh);
-                  top: 20vh; 
+                  top: 0; 
                   align-content: center;
                   position: absolute;
                   user-select: none;
@@ -216,7 +216,7 @@
                   height: 74vh; 
                   width: 70vh;
                   left: calc(50vw - 14vh);
-                  top: 3vh; 
+                  top: -30vh; 
                   align-content: center;
                   position: absolute;
                   user-select: none;
@@ -225,19 +225,15 @@
                   width: 30vh;
                   align-content: center;
                   position: absolute;
-                  background-size: cover;
-                  display: none;
               }
               
               .people {
-    position: absolute; /* 부모 요소 기준으로 정렬 */
-    top: 50%; /* 세로 중앙 정렬 */
-    left: 50%; /* 가로 중앙 정렬 */
-    transform: translate(30%, -50%); /* 가로, 세로 모두 정확히 중앙에 배치 */
-    width: auto; /* 비율 유지 */
+    position: fixed; /* 부모 요소 기준으로 정렬 */
+   top: 20vh;
+   left:-5vw;
+    width: 100vw; /* 비율 유지 */
     height: auto; /* 자동 크모 요소에 맞게 이미지 최대 너비 */
     max-height: 100%; /* 부모기 */
-    max-height: 50vh; /* 최대 높이 제한 */
     display: flex; /* 정렬 */
     justify-content: center; /* 자식 요소 가로 정렬 */
     align-items: center; /* 자식 요소 세로 정렬 */
