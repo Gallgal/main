@@ -152,6 +152,7 @@
         
         /*----------모바일----------*/ 
         
+      
         @media (max-width: 768px) and (orientation: portrait) {
             nav{position: fixed; 
                 text-align: right;
@@ -181,7 +182,7 @@
               #main_b1{ position: relative; top: 20vh;}
               
               
-              .zone{position: fixed; width: 80%; left: 5%; height: auto; top: 25%;}
+              .zone{position: fixed; width:80vw; left: 20vw; height: auto; top: 25%;}
               .prompt{height: calc(1.5vw + 1.2rem);}
               .logo_white{
                   width: 70vh;
@@ -201,7 +202,7 @@
               .people{position: relative;
                   height: 50vh;
                   overflow: hidden;
-                  left:-11vh; 
+                  left:11vw; 
                   top: 5vh; 
               user-select: none;
               display: flex;
@@ -234,12 +235,14 @@
             }
             .logo_footer{ width: 25%; height: 65px;  display: flex; align-items: center; transform: scale(0.7);}
         
-            .backyard, .people, .zone {
-    position: absolute; /* 절대 위치 지정 */
-    top: 50%; /* 세로 중앙 */
-    left: 50%; /* 가로 중앙 */
-    transform: translate(-50%, -50%); /* 중앙 정렬 */
+          
+
+.zone {
+    width: 80%; /* 너비 조정 */
+    height: auto; /* 필요에 따라 조정 */
 }
+
+
           </style>
 </head>
 <body>
