@@ -152,8 +152,8 @@
         
         /*----------모바일----------*/ 
         
-      
-      @media (max-width: 768px) and (orientation: portrait) {
+        
+        @media (max-width: 768px) and (orientation: portrait) {
             nav{position: fixed; 
                 text-align: right;
                 right: 0; top: 0;
@@ -182,35 +182,44 @@
               #main_b1{ position: relative; top: 20vh;}
               
               
-              .zone{position: fixed; width:80vw; left: 5%; height: 80vh; top: 25%;}
+              .zone{position: fixed; width: 80%; left: 5%; height: 55%; top: 25%;}
               .prompt{height: calc(1.5vw + 1.2rem);}
               .logo_white{
-                  width: 70vw;
-                
+                  height: 74vh; 
+                  width: 70vh;
+                  left: calc(50vw - 14vh);
+                  top: 3vh; 
                   align-content: center;
                   position: absolute;
                   user-select: none;
               }
               .logo{
-                  width: 30vw;
+                  width: 30vh;
                   align-content: center;
                   position: absolute;
                   background-size: cover;
                   display: none;
               }
               
-              .people{position: relative;
-                  height: 50vh;
-                  overflow: hidden;
-                  left:-40vw; 
-                  top: 5vh; 
-              user-select: none;
-              display: flex;
-              align-items: center;
-              justify-items: center;
-              }
-              
-              #main_p1
+              .people {
+    position: relative;
+    width: 100%; /* 가로를 부모 요소에 맞게 설정 */
+    height: 50vh; /* 상대 높이 유지 */
+    overflow: hidden;
+    user-select: none;
+
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center;    /* 수직 중앙 정렬 */
+    transform: none; /* 이동 효과 제거 */
+}
+
+#main_p1 {
+    max-width: 100%; /* 가로 최대 크기를 부모에 맞춤 */
+    max-height: 100%; /* 세로 최대 크기를 부모에 맞춤 */
+    object-fit: contain; /* 비율을 유지하면서 부모에 맞춤 */
+}
+
               .arrow{ position:absolute; width: 65px; height: 50px; top: calc(50vh - 50px);}
               .right{ right: 16px; display: flex; align-items: center; justify-content: end;}
               .left{ left: 16px;display: flex; align-items: center; justify-content: left;}
@@ -235,6 +244,8 @@
             .logo_footer{ width: 25%; height: 65px;  display: flex; align-items: center; transform: scale(0.7);}
         
         
+        
+         
           }
 
 
